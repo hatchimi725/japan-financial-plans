@@ -1,0 +1,40 @@
+{
+  "category": "新NISA",
+  "plans": [
+    {
+      "category": "新NISA",
+      "name": "新NISA",
+      "summary": "## 新NISAの上限額・限度額は？ NISAは2024年1月に制度変更があり、年間投資枠の上限や非課税保有限度額が変更になりました。 2024年1月スタートの",
+      "eligibility": "日本在住の18歳以上（口座は1人1口座）",
+      "annual_limit": "つみたて投資枠120万円 ＋ 成長投資枠240万円（合計360万円/年）、生涯1,800万円",
+      "tax_benefit": "運用益・配当が非課税（無期限）",
+      "risk_level": "中",
+      "key_points": [
+        "年間上限: つみたて投資枠120万円 ＋ 成長投資枠240万円（合計360万円/年）、生涯1,800万円",
+        "税制優遇: 運用益・配当が非課税（無期限）",
+        "加入資格: 日本在住の18歳以上（口座は1人1口座）",
+        "NISAは2024年1月に制度変更があり、年間投資枠の上限や非課税保有限度額が変更になりました",
+        "2024年1月スタートの新しいNISA制度（以降新NISAと表記）では、年間投資枠の上限が360万円、非課税保有限度額は生涯で1,800万円となり、2023年ま",
+        "| | 旧NISA（～2023年） | | 新NISA（2024年～） | |"
+      ],
+      "action_steps": [
+        "証券会社（SBI・楽天・マネックス等）でNISA口座を開設",
+        "つみたて投資枠でインデックスファンド（全世界株・S&P500等）を月額設定",
+        "成長投資枠で個別株・ETFを購入（任意）",
+        "年360万円の上限を意識しながら長期保有"
+      ],
+      "source_urls": [
+        "https://www.rakuten-sec.co.jp/web/nisa/limit/",
+        "https://www.am-one.co.jp/pickup/nisa-guide/whats-nisa/seichotousiwaku.html",
+        "https://www.matsui.co.jp/money-satellite/column/beginner/nisa/cl-nisa-cap.html",
+        "https://www.fsa.go.jp/policy/nisa2/about/nisa2024/slide_202406.pdf",
+        "https://www.fsa.go.jp/policy/nisa2/question/",
+        "https://kabutan.jp/hikaku/ranking_nisa/",
+        "https://www.tsumitatenisa.jp/contents/nn010.html",
+        "https://kabutan.jp/hikaku/"
+      ],
+      "last_updated": "2026-05-16T03:29:20.466750"
+    }
+  ],
+  "processed_at": "2026-05-16T03:29:20.467023"
+}

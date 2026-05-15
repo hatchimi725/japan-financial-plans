@@ -1,0 +1,40 @@
+{
+  "category": "確定拠出年金（企業型DC）",
+  "plans": [
+    {
+      "category": "確定拠出年金（企業型DC）",
+      "name": "確定拠出年金（企業型DC）",
+      "summary": "の掛金を各月拠出できるようになります。 これにより、事業主掛金が低い方がiDeCo を利用しやすくなります。 月額27,500円から各月の企業型ＤＣの事業主掛金",
+      "eligibility": "企業型DCを導入している会社の従業員",
+      "annual_limit": "他の企業年金なし：月5.5万円（年66万円）、他の企業年金あり：月2.75万円",
+      "tax_benefit": "掛金が給与扱いにならず非課税、運用益も非課税",
+      "risk_level": "中",
+      "key_points": [
+        "年間上限: 他の企業年金なし：月5.5万円（年66万円）、他の企業年金あり：月2.75万円",
+        "税制優遇: 掛金が給与扱いにならず非課税、運用益も非課税",
+        "加入資格: 企業型DCを導入している会社の従業員",
+        "月額27,500円から各月の企業型ＤＣの事業主掛金を控除した残余の範囲内(上限12,000円)で、 iDeCo の掛金を各月拠出できるようになります",
+        "企業型ＤＣと確定給付型（ＤＢ、厚生年金基金など）に加入する方は 令和３（２０２１）年９月現在 DCの拠出可能な枠について、確定給付型（ＤＢ、厚生年金基金など）ご",
+        "令和３（２０２１）年９月現在 令和６（２０２４）年1２月からは iDeCo は・・・ 月額55,000円から各月の事業主の拠出額※を控除した額(20,000円を"
+      ],
+      "action_steps": [
+        "会社のDC制度の有無・掛金上限を人事部で確認",
+        "マッチング拠出が可能な場合は活用（会社掛金と同額まで追加拠出）",
+        "運用商品をインデックスファンド中心に設定",
+        "iDeCoとの併用可否を確認（2022年改正で条件緩和）"
+      ],
+      "source_urls": [
+        "https://www.mhlw.go.jp/content/12500000/000823725.pdf",
+        "https://money-bu-jpx.com/news/article056939/",
+        "https://www.smtb.jp/-/media/tb/business/pension/column/journal/pdf/penjournal_240305.pdf",
+        "https://www.soico.jp/no1/news/securities/5771",
+        "https://dc.sr-minami.net/dc-64/",
+        "https://ios-moneyseminar.jp/column/ideco10.html",
+        "https://biz.moneyforward.com/establish/basic/81631/",
+        "https://media.monex.co.jp/articles/-/29227"
+      ],
+      "last_updated": "2026-05-16T03:30:39.502872"
+    }
+  ],
+  "processed_at": "2026-05-16T03:30:39.503009"
+}

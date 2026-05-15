@@ -101,15 +101,13 @@ CATEGORY_MAP: dict[str, PlanCategory] = {c.name: c for c in CATEGORIES}
 class AppConfig:
     tavily_api_key: str
     firecrawl_api_key: str
-    anthropic_api_key: str
     max_search_results: int = 5
     max_scrape_pages: int = 3
-    claude_model: str = "claude-sonnet-4-6"
 
     @classmethod
     def from_env(cls) -> "AppConfig":
         missing = []
-        for var in ("TAVILY_API_KEY", "FIRECRAWL_API_KEY", "ANTHROPIC_API_KEY"):
+        for var in ("TAVILY_API_KEY", "FIRECRAWL_API_KEY"):
             if not os.environ.get(var):
                 missing.append(var)
         if missing:
@@ -117,5 +115,4 @@ class AppConfig:
         return cls(
             tavily_api_key=os.environ["TAVILY_API_KEY"],
             firecrawl_api_key=os.environ["FIRECRAWL_API_KEY"],
-            anthropic_api_key=os.environ["ANTHROPIC_API_KEY"],
         )

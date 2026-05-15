@@ -1,0 +1,40 @@
+{
+  "category": "住宅ローン控除",
+  "plans": [
+    {
+      "category": "住宅ローン控除",
+      "name": "住宅ローン控除",
+      "summary": "住宅取得価格：3,000万円 住宅性能と世帯状況：省エネ基準適合住宅、子育て世帯・若者夫婦世帯の特例対象外であるその他世帯（借入上限額3,000万円） 住宅ロー",
+      "eligibility": "住宅ローンを利用して住宅を取得・居住する方",
+      "annual_limit": "年末ローン残高の0.7%（最大35万円/年）、最長13年間",
+      "tax_benefit": "所得税・住民税から直接控除（還付）",
+      "risk_level": "なし",
+      "key_points": [
+        "年間上限: 年末ローン残高の0.7%（最大35万円/年）、最長13年間",
+        "税制優遇: 所得税・住民税から直接控除（還付）",
+        "加入資格: 住宅ローンを利用して住宅を取得・居住する方",
+        "住宅性能と世帯状況：省エネ基準適合住宅、子育て世帯・若者夫婦世帯の特例対象外であるその他世帯（借入上限額3,000万円）",
+        "住宅ローン金利：2.5%（全期間固定・返済期間35年）",
+        "年収：500万円（給与所得控除計算後の所得金額：356万円）"
+      ],
+      "action_steps": [
+        "住宅購入・建築時に省エネ基準適合物件であることを確認",
+        "入居翌年に確定申告で初回申請（書類：残高証明書・登記事項証明書等）",
+        "2年目以降は年末調整で自動適用（給与所得者の場合）",
+        "13年間控除が続くため、毎年残高証明書を保管"
+      ],
+      "source_urls": [
+        "https://madoguchi.iyell.jp/loan/after/koujyo/housing-deduction/",
+        "https://mogecheck.jp/articles/show/5P3zRGxV2oav4OAWoaMZ",
+        "https://www.eloan.co.jp/home/sim/deduction/fine/",
+        "https://www.j-anshin.co.jp/column/shinchiku/a91",
+        "https://www.toray-tcc.co.jp/fudousan/kisochishiki/vol22.html",
+        "https://suumo.jp/article/oyakudachi/oyaku/chukoikkodate/ck_knowhow/jutakuloan_chuko/",
+        "https://www.j-anshin.co.jp/column/shinchiku/a66",
+        "https://mogecheck.jp/articles/show/lZL61dGp4Plm4VkO9Rv3"
+      ],
+      "last_updated": "2026-05-16T03:30:17.415853"
+    }
+  ],
+  "processed_at": "2026-05-16T03:30:17.415989"
+}

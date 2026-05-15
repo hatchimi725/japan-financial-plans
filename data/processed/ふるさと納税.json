@@ -1,0 +1,40 @@
+{
+  "category": "ふるさと納税",
+  "plans": [
+    {
+      "category": "ふるさと納税",
+      "name": "ふるさと納税",
+      "summary": "### 限度額は住民税所得割額から計算する 限度額を決定する重要な要素の一つが「住民税所得割額」です。これは、前年の所得金額に応じて課税される住民税のことで、こ",
+      "eligibility": "納税義務のある方なら誰でも（収入に応じた控除上限あり）",
+      "annual_limit": "控除上限は年収・家族構成による（例：年収500万・独身で約6万円）",
+      "tax_benefit": "2,000円の自己負担で残額が所得税・住民税から控除",
+      "risk_level": "なし",
+      "key_points": [
+        "年間上限: 控除上限は年収・家族構成による（例：年収500万・独身で約6万円）",
+        "税制優遇: 2,000円の自己負担で残額が所得税・住民税から控除",
+        "加入資格: 納税義務のある方なら誰でも（収入に応じた控除上限あり）",
+        "具体的には、住民税所得割額の約20%が、ふるさと納税の控除上限額の目安となります",
+        "所得税からの控除 = （ふるさと納税額 － 2,000円） × 所得税の税率",
+        "住民税からの控除（基本分） = （ふるさと納税額 － 2,000円） × 10％"
+      ],
+      "action_steps": [
+        "ふるさとチョイス・さとふる等のポータルで控除上限額をシミュレーション",
+        "気に入った自治体・返礼品を選んで寄付",
+        "ワンストップ特例申請書を5自治体以内に提出（確定申告不要）",
+        "翌年の住民税から控除されていることを確認"
+      ],
+      "source_urls": [
+        "https://www.n-estem.co.jp/e-trust/column/setsuzei/2511-02/",
+        "https://www.satofull.jp/static/calculation01.php",
+        "https://www.furusato-tax.jp/about/simulation?srsltid=AfmBOornN6vQtsCdwC4RS61lZEAN4IJ5tD8VoQ8fp12AtPL3p-TBMaI4",
+        "https://www.furusato-tax.jp/about/simulation?srsltid=AfmBOooHjPJ7m0Xq9teEtCCV9LsEXkTxf2HHVfS1cI-0yO1Or0sMbUDz",
+        "https://www.furusato-tax.jp/about/simulation?srsltid=AfmBOopBJhdEGfUNKyZ4sDWjruVHAUSGR3F2EiTTHAFW2RhyKG5jkrKH",
+        "https://event.rakuten.co.jp/furusato/guide/tax/",
+        "https://www.furusato-tax.jp/about/onestop?srsltid=AfmBOor1OQHP9GMf0RXjv0mg1O0mDO6dJclnZe0PaRTG-Tm3Wb-8PuWK",
+        "https://www.satofull.jp/static/onestop.php"
+      ],
+      "last_updated": "2026-05-16T03:29:58.382992"
+    }
+  ],
+  "processed_at": "2026-05-16T03:29:58.383075"
+}

@@ -1,0 +1,40 @@
+{
+  "category": "iDeCo",
+  "plans": [
+    {
+      "category": "iDeCo",
+      "name": "iDeCo",
+      "summary": "2 0 2 4 年1 2 月から、 i D e C o の拠出限度額が1 . 2 万円→２万円になります！ 国家公務員・地方公務員の皆さまへ 制度見直しに伴い、",
+      "eligibility": "20歳以上65歳未満の国民年金・厚生年金加入者",
+      "annual_limit": "会社員：年14.4万〜27.6万円、自営業：年81.6万円",
+      "tax_benefit": "掛金全額所得控除、運用益非課税、受取時も控除あり",
+      "risk_level": "中",
+      "key_points": [
+        "年間上限: 会社員：年14.4万〜27.6万円、自営業：年81.6万円",
+        "税制優遇: 掛金全額所得控除、運用益非課税、受取時も控除あり",
+        "加入資格: 20歳以上65歳未満の国民年金・厚生年金加入者",
+        "2 0 2 4 年1 2 月から、 i D e C o の拠出限度額が1 . 2 万円→２万円になります！ 国家公務員・地方公務員の皆さまへ 制度見直しに伴い、",
+        "2024年12月（2025年１月引き落とし分）以降、公務員共済組合の共済掛金 相当額の評価方法を実態にあった算定方法へ見直します",
+        "iDeCoの拠出限度額が2万円まで引き上がり、拠出限度額（年額）が、これま での14万4千円から24万円に大幅アップします"
+      ],
+      "action_steps": [
+        "金融機関（証券会社・銀行）でiDeCo口座を開設（会社員は事業主証明書が必要）",
+        "掛金月額を設定（5,000円〜上限内で1,000円単位）",
+        "運用商品を選択（インデックスファンド推奨）",
+        "年末調整または確定申告で所得控除を申請"
+      ],
+      "source_urls": [
+        "https://www.mhlw.go.jp/content/12500000/001252904.pdf",
+        "https://www.jp-bank.japanpost.jp/kojin/shisanunyou/kakutei/pdf/ideco202412.pdf",
+        "https://taxlabor.com/ideco-kakekingaku-2024-kaisei/",
+        "https://www.soico.jp/no1/news/securities/5671",
+        "http://www.cnhd.co.jp/nkikin/img/file264.pdf",
+        "https://www.mhlw.go.jp/content/12500000/000884281.pdf",
+        "https://go.sbisec.co.jp/prd/ideco/ide-column-20230731-46.html",
+        "https://www.rakuten-card.co.jp/minna-money/securities/investment_ideco/article_2108_00001/"
+      ],
+      "last_updated": "2026-05-16T03:29:39.819643"
+    }
+  ],
+  "processed_at": "2026-05-16T03:29:39.819805"
+}

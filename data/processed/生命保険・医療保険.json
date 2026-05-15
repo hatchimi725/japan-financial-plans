@@ -1,0 +1,40 @@
+{
+  "category": "生命保険・医療保険",
+  "plans": [
+    {
+      "category": "生命保険・医療保険",
+      "name": "生命保険・医療保険",
+      "summary": "なお、2026年分の所得税については、居住者に23歳未満の扶養親族がいる場合に限り、生命保険料控除（新制度）の一般生命保険料控除について見直しがあります。 詳し",
+      "eligibility": "制限なし（健康状態・年齢により条件が変わる場合あり）",
+      "annual_limit": "生命保険料控除：一般・医療・個人年金それぞれ最大4万円（合計12万円）",
+      "tax_benefit": "支払保険料が所得控除（最大12万円）",
+      "risk_level": "低",
+      "key_points": [
+        "年間上限: 生命保険料控除：一般・医療・個人年金それぞれ最大4万円（合計12万円）",
+        "税制優遇: 支払保険料が所得控除（最大12万円）",
+        "加入資格: 制限なし（健康状態・年齢により条件が変わる場合あり）",
+        "なお、2026年分の所得税については、居住者に23歳未満の扶養親族がいる場合に限り、生命保険料控除（新制度）の一般生命保険料控除について見直しがあります",
+        "| 3万円以下 | 払込保険料の全額 |",
+        "| 3万円超～6万円以下 | 払込保険料など×1/2＋1万5,000円 |"
+      ],
+      "action_steps": [
+        "現在の保障内容と保険料を整理（不要な保険は見直し）",
+        "公的保障（健康保険・傷病手当金等）で賄えない部分を確認",
+        "掛け捨て医療保険＋就業不能保険を軸に必要保障を設計",
+        "年末調整で生命保険料控除を申請（証明書を保険会社から受取）"
+      ],
+      "source_urls": [
+        "https://www.jp-life.japanpost.jp/column/money/life-hoken-relief.html",
+        "https://www.orixlife.co.jp/customer/subtraction/limit.html",
+        "https://www.jili.or.jp/knows_learns/basic/tax/22.html",
+        "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1140.htm",
+        "https://www.f-l-p.co.jp/knowledge/1259",
+        "https://www.hokennomadoguchi.com/columns/seimei/iryo/shushin/discarded/",
+        "https://hokencospa.jp/categories/medical/columns/medical-insurance-term",
+        "https://www.hokende.com/life-insurance/medical/whole_medical/simulation"
+      ],
+      "last_updated": "2026-05-16T03:30:33.254735"
+    }
+  ],
+  "processed_at": "2026-05-16T03:30:33.254927"
+}

@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>レポート概要 ― 7つのファイナンシャルプランの位置づけ</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "Hiragino Sans", "Yu Gothic UI", sans-serif;
+  background: #f8fafc;
+  color: #1e293b;
+  line-height: 1.75;
+}
+.site-header {
+  background: linear-gradient(135deg, #0f2240 0%, #1e40af 100%);
+  color: #fff;
+  padding: 2.5rem 2.5rem 2rem;
+}
+.site-header h1 { font-size: 1.7rem; font-weight: 800; letter-spacing: -.01em; }
+.site-header .sub { font-size: 0.9rem; opacity: 0.75; margin-top: 0.4rem; }
+.container { max-width: 980px; margin: 0 auto; padding: 2.5rem 1.5rem 5rem; }
+.back { margin-bottom: 1.5rem; }
+.back a { color: #2563eb; font-size: 0.88rem; text-decoration: none; }
+.back a:hover { text-decoration: underline; }
+
+/* ===== intro ===== */
+.intro {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.07);
+  padding: 1.8rem 2rem;
+  margin-bottom: 2.5rem;
+  font-size: 0.95rem;
+  color: #334155;
+}
+.intro h2 { font-size: 1.1rem; font-weight: 700; color: #1e3a5f; margin-bottom: 0.8rem; }
+.intro p + p { margin-top: 0.6rem; }
+
+/* ===== landscape map ===== */
+.map-section { margin-bottom: 2.5rem; }
+.map-section h2 {
+  font-size: 1.05rem; font-weight: 700; color: #1e3a5f;
+  margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;
+}
+.axis-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.axis-box {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.07);
+  padding: 1.2rem 1.4rem;
+}
+.axis-box .axis-title {
+  font-size: 0.78rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .06em; color: #64748b; margin-bottom: 0.7rem;
+}
+.tag-list { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.tag {
+  display: inline-block; padding: 0.25rem 0.7rem;
+  border-radius: 999px; font-size: 0.8rem; font-weight: 600;
+  text-decoration: none; transition: opacity .15s;
+}
+.tag:hover { opacity: .75; }
+.tag-blue   { background: #dbeafe; color: #1d4ed8; }
+.tag-green  { background: #dcfce7; color: #166534; }
+.tag-amber  { background: #fef3c7; color: #92400e; }
+.tag-purple { background: #ede9fe; color: #5b21b6; }
+.tag-slate  { background: #e2e8f0; color: #334155; }
+
+/* ===== plan cards ===== */
+.plans-section h2 {
+  font-size: 1.05rem; font-weight: 700; color: #1e3a5f;
+  margin-bottom: 1rem;
+}
+.plan-overview {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.07);
+  padding: 1.5rem 1.8rem;
+  margin-bottom: 1.4rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0 1.4rem;
+}
+.plan-number {
+  font-size: 2rem; font-weight: 800; color: #cbd5e1;
+  line-height: 1; padding-top: 0.1rem;
+  min-width: 2.2rem; text-align: right;
+}
+.plan-body {}
+.plan-header {
+  display: flex; align-items: center; gap: 0.7rem;
+  margin-bottom: 0.5rem; flex-wrap: wrap;
+}
+.plan-name {
+  font-size: 1.15rem; font-weight: 700; color: #1e3a5f;
+}
+.plan-name a { color: inherit; text-decoration: none; }
+.plan-name a:hover { text-decoration: underline; }
+.badge {
+  display: inline-block; padding: 0.18rem 0.65rem;
+  border-radius: 999px; font-size: 0.75rem; font-weight: 700;
+}
+.badge-no-risk  { background: #dcfce7; color: #166534; }
+.badge-low-risk { background: #fef9c3; color: #854d0e; }
+.badge-mid-risk { background: #fef3c7; color: #92400e; }
+.badge-first    { background: #dbeafe; color: #1d4ed8; }
+.badge-cond     { background: #ede9fe; color: #5b21b6; }
+.badge-invest   { background: #fce7f3; color: #9d174d; }
+
+.plan-desc { font-size: 0.93rem; color: #334155; margin-bottom: 0.8rem; }
+.plan-meta {
+  display: flex; flex-wrap: wrap; gap: 0.5rem;
+}
+.meta-chip {
+  background: #f1f5f9; border-radius: 6px;
+  padding: 0.25rem 0.7rem; font-size: 0.8rem; color: #475569;
+}
+.meta-chip strong { color: #1e293b; }
+.plan-note {
+  margin-top: 0.8rem; padding: 0.6rem 0.9rem;
+  background: #f8fafc; border-left: 3px solid #2563eb;
+  border-radius: 0 6px 6px 0; font-size: 0.85rem; color: #475569;
+}
+
+/* ===== synergy ===== */
+.synergy-section { margin-top: 2.5rem; }
+.synergy-section h2 {
+  font-size: 1.05rem; font-weight: 700; color: #1e3a5f; margin-bottom: 1rem;
+}
+.synergy-table {
+  width: 100%; border-collapse: collapse; font-size: 0.88rem;
+  background: #fff; border-radius: 10px; overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,.07);
+}
+.synergy-table th {
+  background: #1e3a5f; color: #fff;
+  padding: 0.65rem 1rem; text-align: left; font-weight: 600;
+}
+.synergy-table td { padding: 0.6rem 1rem; border-bottom: 1px solid #e2e8f0; }
+.synergy-table tr:last-child td { border-bottom: none; }
+.synergy-table tr:hover td { background: #eff6ff; }
+
+/* ===== step guide ===== */
+.steps-section { margin-top: 2.5rem; }
+.steps-section h2 {
+  font-size: 1.05rem; font-weight: 700; color: #1e3a5f; margin-bottom: 1rem;
+}
+.step-list { list-style: none; counter-reset: step; }
+.step-list li {
+  counter-increment: step;
+  display: flex; gap: 1rem; align-items: flex-start;
+  background: #fff; border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.07);
+  padding: 1rem 1.2rem; margin-bottom: 0.75rem;
+}
+.step-list li::before {
+  content: counter(step);
+  background: #2563eb; color: #fff;
+  font-weight: 800; font-size: 0.9rem;
+  min-width: 1.8rem; height: 1.8rem;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; margin-top: 0.05rem;
+}
+.step-text { font-size: 0.93rem; }
+.step-text strong { color: #1e3a5f; }
+
+@media (max-width: 620px) {
+  .axis-grid { grid-template-columns: 1fr; }
+  .plan-overview { grid-template-columns: 1fr; }
+  .plan-number { display: none; }
+}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <h1>レポート概要 ― 7つのファイナンシャルプランの位置づけ</h1>
+  <p class="sub">自動生成: 2026-05-16 &nbsp;|&nbsp; 対象: 日本国内で実行可能な制度・投資手法</p>
+</header>
+<div class="container">
+  <div class="back"><a href="./INDEX.html">← インデックスに戻る</a></div>
+
+  <!-- ===== はじめに ===== -->
+  <div class="intro">
+    <h2>このレポート群について</h2>
+    <p>本レポートセットは、日本在住者が活用できる代表的な7つのファイナンシャルプランを、Tavily（Web検索）と Firecrawl（公式サイトスクレイピング）で自動収集・整理したものです。</p>
+    <p>各レポートは「節税制度」「投資手法」「保障」の3軸で構成されており、組み合わせて使うことで税負担を抑えながら資産形成と生活保障を同時に実現できます。</p>
+    <p>以下の概要では、①各プランの目的と特徴、②誰に優先度が高いか、③プラン間のシナジーを解説します。</p>
+  </div>
+
+  <!-- ===== 全体マップ ===== -->
+  <div class="map-section">
+    <h2>全体マップ ― 目的別の分類</h2>
+    <div class="axis-grid">
+      <div class="axis-box">
+        <div class="axis-title">節税・控除（リスクなし〜低）</div>
+        <div class="tag-list">
+          <a class="tag tag-green" href="./ふるさと納税.html">ふるさと納税</a>
+          <a class="tag tag-green" href="./住宅ローン控除.html">住宅ローン控除</a>
+          <a class="tag tag-green" href="./生命保険・医療保険.html">生命保険料控除</a>
+        </div>
+      </div>
+      <div class="axis-box">
+        <div class="axis-title">老後資産・積立（中リスク）</div>
+        <div class="tag-list">
+          <a class="tag tag-blue" href="./新NISA.html">新NISA</a>
+          <a class="tag tag-blue" href="./iDeCo.html">iDeCo</a>
+          <a class="tag tag-blue" href="./確定拠出年金企業型DC.html">企業型DC</a>
+        </div>
+      </div>
+      <div class="axis-box">
+        <div class="axis-title">資産形成・投資（中リスク）</div>
+        <div class="tag-list">
+          <a class="tag tag-purple" href="./高配当株・インデックス投資.html">インデックス投資</a>
+          <a class="tag tag-purple" href="./高配当株・インデックス投資.html">高配当株</a>
+        </div>
+      </div>
+      <div class="axis-box">
+        <div class="axis-title">リスク管理・保障</div>
+        <div class="tag-list">
+          <a class="tag tag-amber" href="./生命保険・医療保険.html">医療保険</a>
+          <a class="tag tag-amber" href="./生命保険・医療保険.html">就業不能保険</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 各プランの位置づけ ===== -->
+  <div class="plans-section">
+    <h2>各レポートの位置づけ</h2>
+
+    <!-- 1. 新NISA -->
+    <div class="plan-overview">
+      <div class="plan-number">1</div>
+      <div class="plan-body">
+        <div class="plan-header">
+          <span class="plan-name"><a href="./新NISA.html">新NISA</a></span>
+          <span class="badge badge-first">全員優先度：最高</span>
+          <span class="badge badge-mid-risk">中リスク</span>
+        </div>
+        <p class="plan-desc">
+          2024年に恒久化された投資非課税制度。<strong>運用益・配当が永久に非課税</strong>になる日本最強の資産形成ツール。年間360万円・生涯1,800万円の枠内で、株式・投資信託を非課税運用できる。
+          他のすべてのプランの「投資部分」を収容する器として機能するため、まず最初に口座開設すべき制度。
+        </p>
+        <div class="plan-meta">
+          <span class="meta-chip">年間上限 <strong>360万円</strong></span>
+          <span class="meta-chip">生涯上限 <strong>1,800万円</strong></span>
+          <span class="meta-chip">対象 <strong>18歳以上・日本在住</strong></span>
+          <span class="meta-chip">税優遇 <strong>運用益・配当が非課税（無期限）</strong></span>
+        </div>
+        <div class="plan-note">
+          <strong>位置づけ：</strong>資産形成の基盤。インデックス投資・高配当株いずれもこの枠で行うのが最優先。iDeCoや企業型DCと組み合わせて老後資金の二本柱を形成する。
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. iDeCo -->
+    <div class="plan-overview">
+      <div class="plan-number">2</div>
+      <div class="plan-body">
+        <div class="plan-header">
+          <span class="plan-name"><a href="./iDeCo.html">iDeCo（個人型確定拠出年金）</a></span>
+          <span class="badge badge-first">所得がある人：優先度高</span>
+          <span class="badge badge-mid-risk">中リスク</span>
+        </div>
+        <p class="plan-desc">
+          掛金が<strong>全額所得控除</strong>され、運用益も非課税、受取時も控除が使える「三段階の節税」が特徴。節税効果は新NISAより大きいが、<strong>60歳まで引き出せない</strong>流動性制約がある。
+          2024年12月から公務員の拠出限度額が月2万円に引き上げられ、さらに使いやすくなった。
+        </p>
+        <div class="plan-meta">
+          <span class="meta-chip">年間上限 <strong>会社員：14.4〜27.6万円</strong></span>
+          <span class="meta-chip"><strong>自営業：81.6万円</strong></span>
+          <span class="meta-chip">対象 <strong>20〜65歳・年金加入者</strong></span>
+          <span class="meta-chip">税優遇 <strong>掛金全額所得控除</strong></span>
+        </div>
+        <div class="plan-note">
+          <strong>位置づけ：</strong>老後資金専用の節税積立。新NISAが「柔軟な資産形成」なのに対し、iDeCoは「老後への強制貯蓄＋最大節税」。収入が高いほど所得控除の恩恵が大きい。
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. ふるさと納税 -->
+    <div class="plan-overview">
+      <div class="plan-number">3</div>
+      <div class="plan-body">
+        <div class="plan-header">
+          <span class="plan-name"><a href="./ふるさと納税.html">ふるさと納税</a></span>
+          <span class="badge badge-first">全員優先度：高</span>
+          <span class="badge badge-no-risk">リスクなし</span>
+        </div>
+        <p class="plan-desc">
+          <strong>実質2,000円の自己負担</strong>で返礼品を受け取りつつ、残額が所得税・住民税から控除される。投資リスクがなく、今すぐ始められる最も手軽な節税策。
+          年収500万・独身で約6万円の控除枠があり、5自治体以内ならワンストップ特例で確定申告不要。
+        </p>
+        <div class="plan-meta">
+          <span class="meta-chip">自己負担 <strong>年2,000円のみ</strong></span>
+          <span class="meta-chip">上限の目安 <strong>年収500万・独身：約6万円</strong></span>
+          <span class="meta-chip">対象 <strong>納税義務のある方なら誰でも</strong></span>
+        </div>
+        <div class="plan-note">
+          <strong>位置づけ：</strong>手間・リスク・コストが最小の節税策。まず控除上限をシミュレーションして枠をフルに使い、残りを新NISAやiDeCoに回すのが合理的。
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. 住宅ローン控除 -->
+    <div class="plan-overview">
+      <div class="plan-number">4</div>
+      <div class="plan-body">
+        <div class="plan-header">
+          <span class="plan-name"><a href="./住宅ローン控除.html">住宅ローン控除</a></span>
+          <span class="badge badge-cond">住宅購入者のみ</span>
+          <span class="badge badge-no-risk">リスクなし</span>
+        </div>
+        <p class="plan-desc">
+          住宅ローンを組んで住宅を購入・居住した場合に、年末ローン残高の<strong>0.7%（最大35万円/年）を最長13年間</strong>、所得税・住民税から直接控除できる。
+          条件が合えば1人で最大455万円の税還付を受けられる大型の控除制度。
+        </p>
+        <div class="plan-meta">
+          <span class="meta-chip">最大控除額 <strong>35万円/年 × 最長13年</strong></span>
+          <span class="meta-chip">対象 <strong>住宅ローン利用者</strong></span>
+          <span class="meta-chip">条件 <strong>省エネ基準適合物件が有利</strong></span>
+        </div>
+        <div class="plan-note">
+          <strong>位置づけ：</strong>住宅購入という前提条件があるが、対象者には最大規模の節税効果をもたらす制度。初年度のみ確定申告が必要、2年目以降は年末調整で自動適用される。
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. 確定拠出年金（企業型DC） -->
+    <div class="plan-overview">
+      <div class="plan-number">5</div>
+      <div class="plan-body">
+        <div class="plan-header">
+          <span class="plan-name"><a href="./確定拠出年金企業型DC.html">確定拠出年金（企業型DC）</a></span>
+          <span class="badge badge-cond">DC導入企業の従業員のみ</span>
+          <span class="badge badge-mid-risk">中リスク</span>
+        </div>
+        <p class="plan-desc">
+          会社が運営するiDeCo類似の制度。会社掛金が給与扱いにならないため社会保険料・所得税が節約でき、運用益も非課税。<strong>マッチング拠出</strong>（会社掛金と同額まで従業員も追加拠出）が可能な場合は特に節税効果が大きい。
+          2022年の改正によりiDeCoとの併用がしやすくなった。
+        </p>
+        <div class="plan-meta">
+          <span class="meta-chip">年間上限 <strong>他の企業年金なし：年66万円</strong></span>
+          <span class="meta-chip">対象 <strong>DC制度を持つ会社の従業員</strong></span>
+          <span class="meta-chip">税優遇 <strong>掛金非課税・運用益非課税</strong></span>
+        </div>
+        <div class="plan-note">
+          <strong>位置づけ：</strong>iDeCoの「会社版」。制度があれば最優先で活用すべき。特に人事部への確認とマッチング拠出の有無の確認が重要なアクション。
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. 生命保険・医療保険 -->
+    <div class="plan-overview">
+      <div class="plan-number">6</div>
+      <div class="plan-body">
+        <div class="plan-header">
+          <span class="plan-name"><a href="./生命保険・医療保険.html">生命保険・医療保険</a></span>
+          <span class="badge badge-first">全員：保障の見直しを</span>
+          <span class="badge badge-low-risk">低リスク</span>
+        </div>
+        <p class="plan-desc">
+          節税よりも<strong>万一のリスクに備えることが主目的</strong>の制度。生命保険料控除により、一般・医療・個人年金それぞれ最大4万円（合計12万円）の所得控除が受けられる副次的な節税メリットがある。
+          2026年からは23歳未満の扶養親族がいる場合に一般生命保険料控除が拡充される改正も予定。
+        </p>
+        <div class="plan-meta">
+          <span class="meta-chip">控除上限 <strong>合計12万円の所得控除</strong></span>
+          <span class="meta-chip">対象 <strong>制限なし</strong></span>
+          <span class="meta-chip">主目的 <strong>病気・死亡・就業不能リスクへの備え</strong></span>
+        </div>
+        <div class="plan-note">
+          <strong>位置づけ：</strong>節税ツールというよりリスク管理ツール。まず公的保障（健康保険・傷病手当金）で賄えないギャップを確認し、必要最小限の掛け捨て保険で埋める設計が基本。過剰な保険は資産形成を妨げる。
+        </div>
+      </div>
+    </div>
+
+    <!-- 7. 高配当株・インデックス投資 -->
+    <div class="plan-overview">
+      <div class="plan-number">7</div>
+      <div class="plan-body">
+        <div class="plan-header">
+          <span class="plan-name"><a href="./高配当株・インデックス投資.html">高配当株・インデックス投資</a></span>
+          <span class="badge badge-invest">新NISAと組み合わせて活用</span>
+          <span class="badge badge-mid-risk">中リスク</span>
+        </div>
+        <p class="plan-desc">
+          新NISAの成長投資枠（240万円/年）を活用して行う投資手法。<strong>全世界株・S&amp;P500インデックスファンドへの長期積立</strong>が基本。高配当株（日本株ETFや個別株）を加えることで配当収入も得られる。
+          制度というよりも「新NISAの中でどう投資するか」という運用戦略のガイド。
+        </p>
+        <div class="plan-meta">
+          <span class="meta-chip">非課税枠 <strong>新NISA成長投資枠：240万円/年</strong></span>
+          <span class="meta-chip">対象 <strong>証券口座を開設できる方</strong></span>
+          <span class="meta-chip">主手法 <strong>インデックスファンド積立・高配当株分散</strong></span>
+        </div>
+        <div class="plan-note">
+          <strong>位置づけ：</strong>新NISAのつみたて投資枠では全世界株・S&amp;P500インデックスが王道。成長投資枠は高配当株ETFや個別株の選択肢を広げる。iDeCo・企業型DCと合わせて老後資産の三本柱を構成する。
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== シナジー表 ===== -->
+  <div class="synergy-section">
+    <h2>プラン間のシナジー</h2>
+    <table class="synergy-table">
+      <thead>
+        <tr>
+          <th>組み合わせ</th>
+          <th>効果</th>
+          <th>注意点</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>新NISA ＋ インデックス投資</strong></td>
+          <td>非課税で長期複利運用。運用益・配当が永久に手元に残る</td>
+          <td>つみたて枠は対象商品が限定されている（金融庁認定ファンドのみ）</td>
+        </tr>
+        <tr>
+          <td><strong>iDeCo ＋ 企業型DC</strong></td>
+          <td>老後資金の節税二本柱。掛金が所得控除され現役時代の税負担を大幅軽減</td>
+          <td>どちらも60歳まで引き出し不可。合計上限額に注意（併用条件あり）</td>
+        </tr>
+        <tr>
+          <td><strong>新NISA ＋ iDeCo</strong></td>
+          <td>柔軟な非課税投資＋老後専用節税積立の最強コンボ</td>
+          <td>iDeCoは流動性がないため、生活防衛資金の確保が前提</td>
+        </tr>
+        <tr>
+          <td><strong>ふるさと納税 ＋ 全プラン</strong></td>
+          <td>控除上限内で寄付するだけでリスクゼロの節税。節約分を新NISAに回せる</td>
+          <td>住宅ローン控除と重なると控除上限を超えて効果が薄まるケースあり</td>
+        </tr>
+        <tr>
+          <td><strong>住宅ローン控除 ＋ ふるさと納税</strong></td>
+          <td>両方とも所得税・住民税からの控除。住宅ローン控除で所得税が0になる場合、ふるさと納税は住民税分のみ有効</td>
+          <td>控除しきれない場合はふるさと納税の効果が減少するため、先にシミュレーション必須</td>
+        </tr>
+        <tr>
+          <td><strong>生命保険 ＋ 資産形成全般</strong></td>
+          <td>リスクを保険で最小化したうえで、余剰資金を新NISAやiDeCoに集中投入できる</td>
+          <td>貯蓄型保険は利回りが低く資産形成には不向き。掛け捨て＋新NISA運用が基本</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ===== 始め方ガイド ===== -->
+  <div class="steps-section">
+    <h2>おすすめの優先順位と始め方</h2>
+    <ol class="step-list">
+      <li>
+        <div class="step-text">
+          <strong>ふるさと納税の控除上限をシミュレーション</strong>し、今年分を寄付する。リスクゼロ・即効性あり。節約分が他プランへの原資になる。
+        </div>
+      </li>
+      <li>
+        <div class="step-text">
+          <strong>新NISA口座を証券会社（SBI・楽天・マネックス等）で開設</strong>する。まずつみたて投資枠でインデックスファンドを月1万円でも積立設定する。
+        </div>
+      </li>
+      <li>
+        <div class="step-text">
+          <strong>会社に企業型DCがあれば人事部に確認</strong>し、マッチング拠出の有無と上限を把握。DCがあれば新NISAより先に満額活用を検討する（社会保険料節約効果もあるため）。
+        </div>
+      </li>
+      <li>
+        <div class="step-text">
+          <strong>iDeCoの加入を検討</strong>する。企業型DCがない場合や追加節税余地がある場合に有効。収入が高いほど所得控除の価値が大きい。
+        </div>
+      </li>
+      <li>
+        <div class="step-text">
+          <strong>生命・医療保険の内容を見直す</strong>。公的保障で賄えないリスクだけを掛け捨て保険でカバーし、余剰保険料は新NISA積立に振り替える。
+        </div>
+      </li>
+      <li>
+        <div class="step-text">
+          <strong>住宅購入を検討中または予定の方</strong>は、省エネ基準適合物件であることを確認し、住宅ローン控除の申請書類を漏れなく準備する（初回は確定申告必須）。
+        </div>
+      </li>
+      <li>
+        <div class="step-text">
+          <strong>新NISA枠が埋まってきたら</strong>、高配当株ETFや個別株で配当収入の柱を作る。インデックスファンドと高配当株の比率は目的（成長重視 vs. 収入重視）で調整する。
+        </div>
+      </li>
+    </ol>
+  </div>
+
+</div>
+</body>
+</html>
