@@ -19,7 +19,7 @@ logging.basicConfig(
     handlers=[
         logging.StreamHandler(sys.stdout),
         logging.FileHandler(
-            Path(__file__).parent.parent.parent.parent / "pipeline.log",
+            Path(__file__).parent.parent.parent / "pipeline.log",
             encoding="utf-8",
         ),
     ],
