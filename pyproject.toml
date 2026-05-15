@@ -1,0 +1,32 @@
+﻿[project]
+name = "japan-financial-plans"
+version = "0.1.0"
+description = "日本国内で実行可能なファイナンシャルプランの情報収集・整理ツール"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.4",
+    "pytest>=8",
+    "mypy>=1.10",
+]
+
+[project.scripts]
+# コマンドライン エントリポイント（必要に応じて設定）
+# japan-financial-plans = "japan-financial-plans.main:main"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+ignore = []
+
+[tool.mypy]
+strict = true
+python_version = "3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
