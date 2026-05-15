@@ -3,18 +3,22 @@ name = "japan-financial-plans"
 version = "0.1.0"
 description = "日本国内で実行可能なファイナンシャルプランの情報収集・整理ツール"
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "anthropic>=0.40",
+    "httpx>=0.27",
+    "pydantic>=2.7",
+]
 
 [project.optional-dependencies]
 dev = [
     "ruff>=0.4",
     "pytest>=8",
     "mypy>=1.10",
+    "pytest-httpx>=0.30",
 ]
 
 [project.scripts]
-# コマンドライン エントリポイント（必要に応じて設定）
-# japan-financial-plans = "japan-financial-plans.main:main"
+japan-financial-plans = "japan_financial_plans.pipeline:main"
 
 [tool.ruff]
 line-length = 100
