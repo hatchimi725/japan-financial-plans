@@ -11,7 +11,7 @@ from .models import PlanInfo, ProcessedResult
 
 logger = logging.getLogger(__name__)
 
-REPORTS_DIR = Path(__file__).parent.parent.parent.parent / "reports"
+REPORTS_DIR = Path(__file__).parent.parent.parent / "reports"
 
 RISK_COLOR = {"低": "#22c55e", "中": "#f59e0b", "高": "#ef4444", "なし": "#94a3b8"}
 RISK_LABEL = {"低": "低リスク", "中": "中リスク", "高": "高リスク", "なし": "リスクなし"}
